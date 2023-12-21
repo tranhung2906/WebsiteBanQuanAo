@@ -1,0 +1,25 @@
+﻿@using WebsiteBanQuanAo.Models;
+@using WebsiteBanQuanAo.Utilities;
+@model IList<Banner>;
+<!-- Banner Section Begin -->
+<section class="banner spad">
+    <div class="container">
+        <div class="row">
+            @foreach (var banner in Model)
+            {
+                <div class="col-lg-7 @banner.BannerID">
+                    <div class="banner__item">
+                        <div class="banner__item__pic">
+                            <img src="@banner.Images" alt="">
+                        </div>
+                        <div class="banner__item__text">
+                            <h2>@banner.Title</h2>
+                            <a href="#">Shop now</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+<!-- Banner Section End -->
